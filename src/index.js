@@ -1,19 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-const TarjetaFruta = () => {
+/**Las props siempre son el primer parámetro que se le pasa
+ * a los componentes funcionales.
+ */
+const TarjetaFruta = (props) => {
     return (
         <div>
-            <h3>Titulo</h3>
+            <h3>{props.name}</h3>
             <hr/>
-            <p>Descripcion</p>
+            <p> {props.price}</p>
         </div>
     )
 }
 
 const App = () => (
     <div>
-        <TarjetaFruta/>
+        <TarjetaFruta name= 'Naranja' price={ 2.00 }/>
+        <TarjetaFruta name= 'Granadilla' price={ 5.50 }/>
+        <TarjetaFruta name= 'Palta' price={ 7.99 }/>
     </div>
 )
 
