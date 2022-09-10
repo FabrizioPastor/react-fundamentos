@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 
 const TarjetaFruta = () => {
     return (
@@ -12,7 +12,10 @@ const TarjetaFruta = () => {
 }
 
 const App = () => (
-    <TarjetaFruta/>
+    <div>
+        <TarjetaFruta/>
+    </div>
 )
 
-ReactDOM.render(App, document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(App())
