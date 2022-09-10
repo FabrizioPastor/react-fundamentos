@@ -3,6 +3,4 @@ import ReactDOM from 'react-dom'
 
 const App = <h1>Hola Mundo!</h1>
 
-const root = document.getElementById('root');
-
-ReactDOM.render(App, root)
+ReactDOM.render(App, document.getElementById('root'))
