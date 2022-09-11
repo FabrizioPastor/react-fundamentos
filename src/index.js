@@ -6,6 +6,8 @@ class TarjetaFruta extends React.Component {
   constructor () {
     super()
 
+    this.agregar = this.agregar.bind(this)
+
     this.state = {
       cantidad : 0
     }
@@ -30,7 +32,7 @@ class TarjetaFruta extends React.Component {
         <p>Cantidad: {this.state.cantidad}</p>
         <button 
           //Usamos bind para que el método sepa que cuando llamamos a this, nos referimos a la clase y no al mismo método
-          onClick= {this.agregar.bind(this)}>
+          onClick= {this.agregar}>
               Agregar
         </button>
         <hr />
