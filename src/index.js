@@ -11,6 +11,14 @@ class TarjetaFruta extends React.Component {
     }
   }
 
+  agregar(){
+    /**cada vez que se llama al método setState se ejecuta el método render de la clase 
+     * lo cual al dejar este método dentro de un arrow function en el método onClick, estaríamos
+     * generando una nueva función por cada click. Esto puede afectar al rendiento.
+    */
+    this.setState({ cantidad: this.state.cantidad += 1 })
+  }
+
   /**Al usuar clases para crear componentes, las "props" no llegan através
    * del método; si no, llegan usando la palabra reservada this
    */
@@ -21,9 +29,8 @@ class TarjetaFruta extends React.Component {
         <p>Precio: $ {this.props.price}</p>
         <p>Cantidad: {this.state.cantidad}</p>
         <button 
-          onClick={ () => {
-              this.setState({ cantidad: this.state.cantidad += 1});
-            }}>
+          //Usamos bind para que el método sepa que cuando llamamos a this, nos referimos a la clase y no al mismo método
+          onClick= {this.agregar.bind(this)}>
               Agregar
         </button>
         <hr />
