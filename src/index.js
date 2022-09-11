@@ -1,6 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
+class TarjetaFruta extends React.Component {
+    /**Al usuar clases para crear componentes, las "props" no llegan através
+     * del método; si no, llegan usando la palabra reservada this
+     */
+    render () {
+        return ( 
+            <div>
+                <h3>{this.props.name}</h3>
+                <hr/>
+                <p> {this.props.price}</p>
+            </div>
+        )
+    }
+}
+
 /**Las props siempre son el primer parámetro que se le pasa
  * a los componentes funcionales.
  */
