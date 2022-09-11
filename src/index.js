@@ -19,15 +19,15 @@ class TarjetaFruta extends React.Component {
 /**Las props siempre son el primer parámetro que se le pasa
  * a los componentes funcionales.
  */
-const TarjetaFruta = (props) => {
-  return (
-    <div>
-      <h3>{props.name}</h3>
-      <hr />
-      <p> {props.price}</p>
-    </div>
-  );
-};
+// const TarjetaFruta = (props) => {
+//   return (
+//     <div>
+//       <h3>{props.name}</h3>
+//       <hr />
+//       <p> {props.price}</p>
+//     </div>
+//   );
+// };
 
 const App = () => (
   <div>
