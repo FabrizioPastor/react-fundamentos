@@ -2,6 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 class TarjetaFruta extends React.Component {
+
+  constructor () {
+    super()
+
+    this.state = {
+      cantidad : 0
+    }
+  }
+
   /**Al usuar clases para crear componentes, las "props" no llegan através
    * del método; si no, llegan usando la palabra reservada this
    */
@@ -9,8 +18,15 @@ class TarjetaFruta extends React.Component {
     return (
       <div>
         <h3>{this.props.name}</h3>
+        <p>Precio: $ {this.props.price}</p>
+        <p>Cantidad: {this.state.cantidad}</p>
+        <button 
+          onClick={ () => {
+              this.setState({ cantidad: this.state.cantidad += 1});
+            }}>
+              Agregar
+        </button>
         <hr />
-        <p> {this.props.price}</p>
       </div>
     );
   }
